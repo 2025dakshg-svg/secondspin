@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SecondSpin | Your Cart</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<div class="logo">
+    <a href="index.html" style="text-decoration: none; color: inherit;">SecondSpin</a>
+</div>
+<body style="background: white; color: black; padding: 50px;">
+    <h1>Your Shopping Cart</h1>
+    <div id="cart-items-container">
+        </div>
+    <hr>
+    <h3>Total: <span id="cart-total">$0</span></h3>
+    <button class="action-btn" onclick="checkout()">Checkout</button>
+    <button class="action-btn" style="background:gray" onclick="clearCart()">Clear Cart</button>
+    
+
+    <script>
+     
+    function displayCart() {
+        const cart = JSON.parse(localStorage.getItem('myCart')) || [];
+        const container = document.getElementById('cart-items-container');
+        let total = 0;
+
+        if (cart.length === 0) {
+            container.innerHTML = "<p>Your cart is empty.</p>";
+            document.getElementById('cart-total').innerText = "$0.00";
+            return;
+        }
+
+        container.innerHTML = cart.map(item => {
+            total += item.price;
+            return `
+                <div class="cart-item" style="display:flex; justify-content:space-between; padding:15px; border-bottom:1px solid #eee;">
+                    <span><strong>${item.title}</strong> by ${item.artist}</span>
+                    <span>$${item.price.toFixed(2)}</span>
+                </div>
+            `;
+        }).join('');
+
+        document.getElementById('cart-total').innerText = "$" + total.toFixed(2);
+    }
+
+    function clearCart() {
+        if(confirm("Are you sure you want to empty your cart?")) {
+            localStorage.removeItem('myCart');
+            location.reload();
+        }
+    }
+
+    function checkout() {
+        const cart = JSON.parse(localStorage.getItem('myCart')) || [];
+        if (cart.length === 0) {
+            alert("Your cart is empty!");
+        } else {
+            alert("Thank you for your purchase! Total: " + document.getElementById('cart-total').innerText);
+            // Optional: clearCart() here if you want to empty after payment
+        }
+    }
+
+    displayCart();
+</script>
+    
+</body>
+</html>

@@ -1,0 +1,523 @@
+ body {
+    background: #111;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+
+}
+.logo {
+    font-size: 30px;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+/* Header */
+.topbar {
+    background: white;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ddd;
+}
+
+.topbar input {
+    padding: 8px;
+    width: 300px;
+}
+
+/* Layout */
+.container {
+    display: flex;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    background: white;
+    padding: 20px;
+    border-right: 1px solid #ddd;
+}
+
+.sidebar select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+}
+
+/* Products */
+.products {
+    flex: 1;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px,1fr));
+    gap: 20px;
+}
+
+.product {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.product:hover {
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.product img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.info {
+    padding: 15px;
+}
+
+.badge {
+    padding: 5px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    color: white;
+}
+
+.mint { background: green; }
+.good { background: orange; }
+
+button {
+    padding: 8px 12px;
+    margin-top: 10px;
+    border: none;
+    background: black;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #444;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top:0; left:0;
+    width:100%; height:100%;
+    background: rgba(0,0,0,0.6);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-box {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.close {
+    cursor: pointer;
+    float: right;
+}
+/* ===== Discogs Style Header ===== */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.main-header {
+    background: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 40px;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* Container for input + button */
+.search-bar {
+    display: flex;
+    align-items: center;
+    background: white;
+    border-radius: 25px; /* This creates the pill shape */
+    padding: 2px 5px 2px 15px; /* Padding: 15px on left for text start */
+    width: 550px; /* Adjust width as needed */
+}
+
+/* The actual text field */
+.search-bar input {
+    flex: 1; /* Makes input take up all available space */
+    border: none;
+    outline: none;
+    padding: 10px 0;
+    font-size: 14px;
+    background: transparent;
+    color: #333;
+}
+
+/* The new Search Button */
+.search-btn {
+    background: #000; /* Black button */
+    color: #fff;      /* White text */
+    border: none;
+    padding: 8px 20px;
+    border-radius: 20px; /* Rounded button inside the rounded bar */
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    font-size: 13px;
+}
+
+.search-btn:hover {
+    background: #444; /* Slight grey on hover */
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.login-btn {
+    background: white;
+    color: black;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.sub-nav {
+    background: #111;
+    padding: 12px 40px;
+    display: flex;
+    gap: 30px;
+}
+
+.sub-nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* ===== Hero Grid ===== */
+
+.hero-grid {
+    display: grid;
+    /* Two Columns: Large left (2 parts), Narrow right (1 part) */
+    grid-template-columns: 2fr 1fr; 
+    /* Three Rows: Exactly 200px each to fit the side images */
+    grid-template-rows: repeat(3, 200px); 
+    gap: 6px;
+    background: black;
+    padding: 10px 40px;
+}
+
+.grid-item {
+    position: relative;
+    overflow: hidden;
+}
+
+/* This forces the first image to span all 3 rows */
+.large {
+    grid-row: span 3;
+}
+
+.grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* This stops images from looking squashed */
+    filter: grayscale(100%);
+    transition: 0.5s ease;
+}
+
+.grid-item:hover img {
+    filter: grayscale(0%);
+    transform: scale(1.05);
+}
+
+/* Overlay Text */
+/* ===== Text Color & Visibility Fix ===== */
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    /* This gradient makes the bottom darker so white text is easier to read */
+    background: linear-gradient(transparent, rgba(0,0,0,0.9)); 
+    color: #ffffff; /* Force text color to white */
+    pointer-events: none;
+}
+
+.overlay h2, 
+.overlay h3 {
+    color: #ffffff !important; /* Ensuring no other styles override this */
+    margin: 0;
+    /* Adds a subtle shadow so text is readable on any image */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); 
+}
+
+.overlay h2 {
+    font-size: 32px;
+    line-height: 1.1;
+}
+
+
+.overlay h3 {
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+
+/* Shop Button */
+.shop-btn {
+    background: white;
+    color: black;
+    padding: 15px 40px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+.shop-btn:hover {
+    background: #ddd;
+}
+/* Best Selling Section Styling */
+/* Best Selling Section */
+.best-selling-container {
+    background: #fff;
+    padding: 30px 40px;
+    color: #000;
+}
+
+/* The Black Slanted Tab Effect */
+.section-header {
+    display: inline-block;
+    background: #002238; /* Dark Discogs blue/black */
+    color: white;
+    padding: 10px 30px 10px 15px;
+    margin-bottom: 25px;
+    clip-path: polygon(0% 0%, 90% 0%, 100% 100%, 0% 100%);
+}
+
+.section-header h2 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Horizontal Scroll without JS */
+.scrolling-wrapper {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+}
+
+/* Hide scrollbar for a cleaner look while keeping functionality */
+.scrolling-wrapper::-webkit-scrollbar {
+    height: 6px;
+}
+.scrolling-wrapper::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 10px;
+}
+
+/* The White Cards */
+.album-card {
+    min-width: 190px;
+    max-width: 190px;
+    display: flex;
+    flex-direction: column;
+}
+
+.album-img-box {
+    width: 100%;
+    aspect-ratio: 1/1;
+    border: 1px solid #eee;
+    margin-bottom: 10px;
+}
+
+.album-img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Text Styling */
+.album-details .title { font-weight: bold; font-size: 14px; margin: 0; }
+.album-details .artist { font-size: 14px; margin: 2px 0; }
+.album-details .meta { font-size: 11px; color: #777; margin: 0; line-height: 1.3; }
+.album-details .copy-info { font-size: 11px; margin-top: 8px; }
+
+/* Shop/Want Buttons */
+.card-footer {
+    display: flex;
+    gap: 8px;
+    margin-top: 15px;
+}
+
+.action-btn {
+    flex: 1;
+    background: #000000;
+    border: 1px solid #000000;
+    padding: 5px 0;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.action-btn:hover {
+    background: #ea0606;
+}
+.scrolling-wrapper::-webkit-scrollbar {
+    display: none; /* Hide scrollbar Chrome/Safari */
+}
+/* Grading Badges */
+.badge {
+    padding: 2px 8px;
+    font-size: 10px;
+    font-weight: bold;
+    border-radius: 4px;
+    text-transform: uppercase;
+    display: inline-block;
+    margin: 5px 0;
+}
+
+.mint { background-color: #28a745; color: white; } /* Green */
+.near-mint { background-color: #8bc34a; color: white; }
+.good { background-color: #ffc107; color: black; } /* Yellow */
+.poor { background-color: #dc3545; color: white; } /* Red */
+
+/* Inventory Layout */
+.inventory-container { padding: 40px; background: white; min-height: 100vh; }
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.main-header {
+    position: sticky; /* Keeps it at the top */
+    top: 0;
+    z-index: 1000; /* Ensures it stays above other content */
+    background: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 40px;
+}
+/* Featured Section */
+.featured-vinyl-section {
+    background: linear-gradient(45deg, #111, #222);
+    padding: 60px 40px;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.featured-container {
+    display: flex;
+    align-items: center;
+    gap: 100px;
+    max-width: 1200px;
+}
+
+/* Glassmorphism Info Panel */
+.glass-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px); /* This makes it "cool" and transparent */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 15px;
+    color: white;
+    margin-top: 20px;
+}
+
+/* The Rotating Vinyl */
+.vinyl-wrapper {
+    position: relative;
+    width: 350px;
+    height: 350px;
+}
+
+.vinyl-disc {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%; /* Makes it a circle */
+    border: 10px solid #000;
+    overflow: hidden;
+    box-shadow: 0 0 50px rgba(0,0,0,0.5);
+    animation: rotateVinyl 10s linear infinite; /* Rotation Animation */
+}
+
+.vinyl-disc img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* The Rotation Keyframes */
+@keyframes rotateVinyl {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+#featured-title { font-size: 48px; color: white; margin-bottom: 5px; }
+#featured-artist { font-size: 24px; color: #ffc107; margin: 0; }
+.trending-tag { color: #aaa; text-transform: uppercase; letter-spacing: 2px; }
+
+/* Stacks the vinyl and the bar vertically */
+.vinyl-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Transparent Glass Player Bar */
+.player-controls {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: 350px; /* Match the vinyl width */
+    background: rgba(255, 255, 255, 0.05); /* Transparent white */
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    padding: 10px 20px;
+    border-radius: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-sizing: border-box;
+}
+
+/* Fix for buttons inside the bar */
+.ctrl-btn {
+    background: none !important; /* Override your general button style */
+    color: white !important;
+    font-size: 20px;
+    padding: 5px;
+    margin: 0;
+}
+
+.progress-container {
+    flex: 1;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    width: 0%;
+    height: 100%;
+    background: #ffc107; /* Trending yellow color */
+}

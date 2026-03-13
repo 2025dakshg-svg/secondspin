@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SecondSpin | Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="main-header">
+    <div class="logo">
+    <a href="index.html" style="text-decoration: none; color: inherit;">SecondSpin</a>
+</div>
+
+      <div class="search-bar">
+    <input type="text" id="homeSearch" placeholder="Search artists, albums...">
+    <button class="search-btn" onclick="handleHomeSearch()">Search</button>
+</div>
+
+<div class="nav-right">
+    <a href="cart.html" style="text-decoration:none; color:white;">
+        Cart (<span id="cart-count">0</span>)
+    </a>
+    </header>
+
+    <nav class="sub-nav">
+        <a href="index.html">Home</a>
+        <a href="inventory.html">Shop Vinyl</a>
+    </nav>
+
+    <section class="hero-grid">
+        <div class="grid-item large">
+            <img src="https://content.discogs.com/media/women-of-early-electronic-music.png">
+            <div class="overlay"><h2>Women of Electronic Music</h2></div>
+        </div>
+        <div class="grid-item">
+            <img src="https://content.discogs.com/media/the-damned-new-rose-album-cover-header-image.png">
+            <div class="overlay"><h3>U.K. Punk</h3></div>
+        </div>
+        <div class="grid-item">
+            <img src="https://content.discogs.com/media/Essential-Underground-Hip-Hop.png">
+            <div class="overlay"><h3>Underground Hip-Hop</h3></div>
+        </div>
+        <div class="grid-item">
+            <img src="https://content.discogs.com/media/pharoah-sanders-floating-points-album-cover-header-image.png">
+            <div class="overlay"><h3>Ambient Jazz</h3></div>
+        </div>
+    </section>
+   <section class="best-selling-container">
+    <div class="section-header">
+        <h2>This Week’s Best-Selling Vinyl Records & CDs</h2>
+    </div>
+    
+    <div class="scrolling-wrapper">
+        <div class="album-card">
+            <div class="album-img-box">
+                <img src="https://i.discogs.com/llp-DHVYHTGS8C6_69rRKVrSab_P5SUbkDE9xAn1zfE/rs:fit/g:sm/q:90/h:597/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTM2NTkx/OTgyLTE3NzIyMjA2/OTMtNDg1NC5qcGVn.jpeg" alt="Gorillaz">
+            </div>
+            <div class="album-details">
+                <p class="title">पर्वत (The Mountain)</p>
+                <p class="artist">Gorillaz</p>
+                <p class="meta">2026</p>
+                <p class="meta">Indie Pop, Alt-Pop,</p>
+                <p class="meta">Vinyl, Album, Limited Edition...</p>
+                <p class="copy-info">41 copies from ₹5500</p>
+            </div>
+            <div class="card-footer">
+                <button class="action-btn" onclick="shopNow(1)">Shop</button>
+            </div>
+        </div>
+
+        <div class="album-card">
+            <div class="album-img-box">
+                <img src="https://content.discogs.com/media/Tatsuro-Yamashita-–-For-You-300x300.jpeg" alt="Tatsuro Yamashita">
+            </div>
+            <div class="album-details">
+                <p class="title">For You</p>
+                <p class="artist">Tatsuro Yamashita</p>
+                <p class="meta">2023</p>
+                <p class="meta">City Pop</p>
+                <p class="meta">Vinyl, Album, Limited Edition...</p>
+                <p class="copy-info">50 copies from ₹3200</p>
+            </div>
+            <div class="card-footer">
+                <button class="action-btn" onclick="shopNow(2)">Shop</button>
+            </div>
+        </div>
+
+        <div class="album-card">
+            <div class="album-img-box">
+                <img src="https://i.discogs.com/yv7vkYity19S0-R2A5Nl75VI2KuJQ3fAFJYidqwEPkM/rs:fit/g:sm/q:90/h:588/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTM2MzUy/NDIwLTE3NzA0MDc2/MTItODcyOS5qcGVn.jpeg" alt="Bad Bunny">
+            </div>
+            <div class="album-details">
+                <p class="title">Debí Tirar Más Fotos</p>
+                <p class="artist">Bad Bunny</p>
+                <p class="meta">2026</p>
+                <p class="meta"> Salsa, Synth-pop, Latin Pop</p>
+                <p class="meta">Vinyl, Opaque White, Album, Reissue</p>
+                <p class="copy-info">133 copies from $31.73</p>
+            </div>
+            <div class="card-footer">
+                <button class="action-btn" onclick="shopNow(3)">Shop</button>
+            </div>
+        </div>
+
+        <div class="album-card">
+            <div class="album-img-box">
+                <img src="https://i.discogs.com/jkcr-JFQkbkDb2y6T-a2OJunee2x1bxjv34TiN6qEDk/rs:fit/g:sm/q:90/h:600/w:596/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTM1MjA3/MzY4LTE3NjA3OTk5/MzgtNjU1MC5qcGVn.jpeg" alt="Olivia Dean">
+            </div>
+            <div class="album-details">
+                <p class="title">The Art Of Loving</p>
+                <p class="artist">Olivia Dean</p>
+                <p class="meta">2025</p>
+                <p class="meta"> Indie Pop, Neo Soul</p>
+                <p class="meta">Vinyl, Album</p>
+                <p class="copy-info">150 copies from $31.22</p>
+            </div>
+            <div class="card-footer">
+                <button class="action-btn" onclick="shopNow(4)">Shop</button>
+            </div>
+        </div>
+
+        <div class="album-card">
+            <div class="album-img-box">
+                <img src="https://i.discogs.com/iJtpsV0-PvehLfNGe6ma1u6KEdYqOZb8SNKmowlHssA/rs:fit/g:sm/q:90/h:600/w:598/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTM2NjA4/NTc4LTE3NzIwMjYx/OTAtNTkyNy5qcGVn.jpeg" alt="Frou Frou">
+            </div>
+            <div class="album-details">
+                <p class="title">Details</p>
+                <p class="artist">Frou Frou</p>
+                <p class="meta">2026</p>
+                <p class="meta"> Downtempo, Synth-pop</p>
+                <p class="meta">Vinyl, Album, Club Edition, Reissue</p>
+                <p class="copy-info">36 copies from $84.99</p>
+            </div>
+            <div class="card-footer">
+                <button class="action-btn" onclick="shopNow(5)">Shop</button>
+            </div>
+        </div>
+
+        <div class="album-card">
+            <div class="album-img-box">
+                <img src="https://i.discogs.com/TVZpee_EbuOFic_UVb61_nI1VGfW2nP1lqOxuEoqe78/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTEyOTA5/NDMtMTQzMTUxMTkz/OS0yNDM1LmpwZWc.jpeg" alt="Klodya">
+            </div>
+            <div class="album-details">
+                <p class="title">I Was Tired Of Being Alone</p>
+                <p class="artist">Klodya</p>
+                <p class="meta">1994</p>
+                <p class="meta"> House</p>
+                <p class="meta">Vinyl,promo</p>
+                <p class="copy-info">1 copy from $7.99</p>
+            </div>
+            <div class="card-footer">
+                <button class="action-btn" onclick="shopNow(6)">Shop</button>
+            </div>
+        </div>
+
+        <div class="album-card">
+            <div class="album-img-box">
+                <img src="https://i.discogs.com/vrRLAdjSll2Frd-Le6iDp4Od-tCsjidW1VnwzkV59h4/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTMxNzgy/NjY4LTE3MzIxMzI2/NTQtMzU0OS5qcGVn.jpeg" alt="Nujabes">
+            </div>
+            <div class="album-details">
+                <p class="title">Modal Soul</p>
+                <p class="artist">Nujabes</p>
+                <p class="meta">2024</p>
+                <p class="meta">Jazzy Hip-Hop, Downtempo</p>
+                <p class="meta">Vinyl, Album, Reissue</p>
+                <p class="copy-info">21 copies from $45.62</p>
+            </div>
+            <div class="card-footer">
+                <button class="action-btn" onclick="shopNow(7)">Shop</button>
+            </div>
+        </div>
+
+        <div class="album-card">
+            <div class="album-img-box">
+                <img src="https://content.discogs.com/media/Album-Cover-Massive-Attack-‎–-Blue-Lines-300x300.jpg" alt="Massive Attack">
+            </div>
+            <div class="album-details">
+                <p class="title">Blue Lines</p>
+                <p class="artist">Massive Attack</p>
+                <p class="meta">2016</p>
+                <p class="meta"> Electronic, Trip Hop</p>
+                <p class="meta">Vinyl, Reissue, 180 Gram</p>
+                <p class="copy-info">245 copies from $23.09</p>
+            </div>
+            <div class="card-footer">
+                <button class="action-btn" onclick="shopNow(8)">Shop</button>
+            </div>
+        </div>
+
+        <div class="album-card">
+            <div class="album-img-box">
+                <img src="https://i.discogs.com/69DGSIXLSUgoWdZb_Dgaq7jvEOn6PCQfD9l-oeor0dg/rs:fit/g:sm/q:90/h:556/w:556/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTM2NTI0/OTAyLTE3NzEyNzMy/OTAtMzk5MC5qcGVn.jpeg" alt="Angine De Poitrine">
+            </div>
+            <div class="album-details">
+                <p class="title">Angine De Poitrine Vol. 1 </p>
+                <p class="artist">Angine De Poitrine</p>
+                <p class="meta">2026</p>
+                <p class="meta"> Psychedelic Rock, Math Rock</p>
+                <p class="meta">Vinyl, Album, Limited Edition, Repress</p>
+                <p class="copy-info">4 copies from $218.97</p>
+            </div>
+            <div class="card-footer">
+                <button class="action-btn" onclick="shopNow(9)">Shop</button>
+            </div>
+        </div>
+
+        <div class="album-card">
+            <div class="album-img-box">
+                <img src="https://i.discogs.com/BbS8t4pYE8nGK1yZURzCm7aCqwkz56pNLlfp80FIm9Q/rs:fit/g:sm/q:90/h:600/w:597/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTM2NDkx/MTk3LTE3NzA5OTAy/OTAtMTgzOS5qcGVn.jpeg" alt="Taylor Swift">
+            </div>
+            <div class="album-details">
+                <p class="title">Opalite </p>
+                <p class="artist">Taylor Swift</p>
+                <p class="meta">2026</p>
+                <p class="meta"> Dance-pop, Synth-pop, Acoustic</p>
+                <p class="meta">Vinyl, Single</p>
+                <p class="copy-info">48 copies from $38.37</p>
+            </div>
+            <div class="card-footer">
+    <button class="action-btn" onclick="addToCart(1)">Shop</button>
+</div>
+        </div>
+
+        <div class="album-card">
+            <div class="album-img-box">
+                <img src="https://i.discogs.com/xd_QHLZPL8wOW1j0QVSWk1oi7DGc3a9tq4npKbakDJc/rs:fit/g:sm/q:90/h:595/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTM2NTk0/MDk3LTE3NzIxMzY1/ODYtMTg4NS5qcGVn.jpeg" alt="Gorillaz">
+            </div>
+            <div class="album-details">
+                <p class="title">पर्वत (The Mountain) </p>
+                <p class="artist">Gorillaz</p>
+                <p class="meta">2026</p>
+                <p class="meta"> Indie Pop, Alt-Pop</p>
+                <p class="meta">Vinyl, Album,Yellow</p>
+                <p class="copy-info">105 copies from $36.00</p>
+            </div>
+            <div class="card-footer">
+                <button class="action-btn" onclick="shopNow(11)">Shop</button>
+            </div>
+        </div>
+
+        <div class="album-card">
+            <div class="album-img-box">
+                <img src="https://i.discogs.com/Ww2hRo9fevhSG-EVpcXW8nVO2rMoQS31edvNgZ0IFsw/rs:fit/g:sm/q:90/h:578/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTM2NTIw/MjYxLTE3NzEyNDMx/OTEtMTI1OS5qcGVn.jpeg" alt="Gorillaz">
+            </div>
+            <div class="album-details">
+                <p class="title">पर्वत (The Mountain) </p>
+                <p class="artist">Gorillaz</p>
+                <p class="meta">2026</p>
+                <p class="meta"> Indie Pop</p>
+                <p class="meta">Vinyl, Album, Black</p>
+                <p class="copy-info">81 copies from $30.00</p>
+            </div>
+            <div class="card-footer">
+                <button class="action-btn" onclick="shopNow(12)">Shop</button>
+            </div>
+        </div>
+
+        <div class="album-card">
+            <div class="album-img-box">
+                <img src="https://content.discogs.com/media/the-smiths-the-queen-is-dead-album-cover-300x300.jpg" alt="The Smiths">
+            </div>
+            <div class="album-details">
+                <p class="title">The Queen Is Dead </p>
+                <p class="artist">The Smiths</p>
+                <p class="meta">2012</p>
+                <p class="meta"> Jangle Pop, Post-Punk, Indie Rock</p>
+                <p class="meta">Vinyl, Album, Reissue, 180 gram</p>
+                <p class="copy-info">330 copies from $20.00</p>
+            </div>
+            <div class="card-footer">
+                <button class="action-btn" onclick="shopNow(13)">Shop</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="best-selling-container">
+    <div class="section-header">
+        <h2>This Week’s Most Valuable Vinyl Records & CDs</h2>
+    </div>
+    <div class="scrolling-wrapper" id="mostValuable">
+        <div class="album-card">
+            <div class="album-img-box">
+                <img src="https://i.discogs.com/f9HxltpumjQpZlcBXQzxXvurnEmyeJBM-nby8zXfXNo/rs:fit/g:sm/q:90/h:600/w:590/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE4NzMw/MTMtMTcyNzc2NDkx/OS04NTI3LmpwZWc.jpeg" alt="Pink Floyd">
+            </div>
+            <div class="album-details">
+                <p class="title">The Dark Side Of The Moon</p>
+                <p class="artist">Pink Floyd</p>
+                <p class="meta">1973</p>
+                <p class="meta">Prog Rock, Psychedelic Rock</p>
+                <p class="meta">Vinyl, Album</p>
+                <p class="copy-info">135 copies from $220.93</p>
+            </div>
+            <div class="card-footer">
+                <button class="action-btn" onclick="shopNow(14)">Shop</button>
+            </div>
+        </div>
+
+        <div class="album-card">
+            <div class="album-img-box">
+                <img src="https://i.discogs.com/1lcPVAbE9vxvnJ1p7rIX7TEZTTtbHQn4oC8Crut1LEA/rs:fit/g:sm/q:90/h:592/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTcwMDE2/OTQtMTQzMTQ4NzAz/OC01NTUxLmpwZWc.jpeg" alt="Glenn Danzig">
+            </div>
+            <div class="album-details">
+                <p class="title">Who Killed Marilyn?</p>
+                <p class="artist">Glenn Danzig</p>
+                <p class="meta">1983</p>
+                <p class="meta">Punk</p>
+                <p class="meta">Vinyl, Purple/Black, Single, Repress</p>
+                <p class="copy-info">2 copies from $500.00</p>
+            </div>
+            <div class="card-footer">
+                <button class="action-btn" onclick="shopNow(15)">Shop</button>
+            </div>
+        </div>
+
+        <div class="album-card">
+            <div class="album-img-box">
+                <img src="https://i.discogs.com/RXKK6cSKnp5Qkl9GbyK89M8-2zvKIBgWboMjzEb_ZUI/rs:fit/g:sm/q:90/h:600/w:596/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTM0ODkx/MDAtMTU1MTE2NTU0/MC01MjI1LmpwZWc.jpeg" alt="The Trips">
+            </div>
+            <div class="album-details">
+                <p class="title">Love Can't Be Modernized</p>
+                <p class="artist">The Trips</p>
+                <p class="meta">1967</p>
+                <p class="meta">Soul</p>
+                <p class="meta">Vinyl, Single</p>
+                <p class="copy-info">2 copies from $2000.00</p>
+            </div>
+            <div class="card-footer">
+                <button class="action-btn" onclick="shopNow(16)">Shop</button>
+            </div>
+        </div>
+
+        <div class="album-card">
+            <div class="album-img-box">
+                <img src="https://content.discogs.com/media/sundowning-sub-300x300.jpg" alt="Sleep Token">
+            </div>
+            <div class="album-details">
+                <p class="title">Sundowning</p>
+                <p class="artist">Sleep Token</p>
+                <p class="meta">2019</p>
+                <p class="meta">Progressive Metal</p>
+                <p class="meta">Vinyl, Box Set, Limited Edition</p>
+                <p class="copy-info">5 copies from $350.00</p>
+            </div>
+            <div class="card-footer">
+                <button class="action-btn" onclick="shopNow(17)">Shop</button>
+            </div>
+        </div>
+
+        <div class="album-card">
+            <div class="album-img-box">
+                <img src="https://i.discogs.com/laySo5Hgh_5_-WHckF_-Cb7BHNjhbMuhMhK47pxQGMI/rs:fit/g:sm/q:90/h:591/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTQyOTY1/NzctMTU5MjY1MTk0/MC05MTMxLmpwZWc.jpeg" alt="Joe Harriott Quintet">
+            </div>
+            <div class="album-details">
+                <p class="title">High Spirits</p>
+                <p class="artist">Joe Harriott Quintet</p>
+                <p class="meta">1965</p>
+                <p class="meta">Post Bop</p>
+                <p class="meta">Vinyl, Album, Mono</p>
+                <p class="copy-info">1 copy from $120.00</p>
+            </div>
+           <div class="card-footer">
+    <button class="action-btn" onclick="addToCart(1)">Shop</button>
+</div>
+        </div>
+
+        <div class="album-card">
+            <div class="album-img-box">
+                <img src="https://i.discogs.com/WIkc2WrjRm69BWyPkACAlLRKfztEtjMEKAuln72CQuQ/rs:fit/g:sm/q:90/h:594/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTMyNDE1/MTAtMTU5MzY4NDA0/OC0yMzcwLmpwZWc.jpeg" alt="Zakarrias">
+            </div>
+            <div class="album-details">
+                <p class="title">Zakarrias</p>
+                <p class="artist">Zakarrias</p>
+                <p class="meta">1971</p>
+                <p class="meta">Folk Rock, Psychedelic Rock</p>
+                <p class="meta">Vinyl, LP</p>
+                <p class="copy-info">2 copies from $1686.05</p>
+            </div>
+            <div class="card-footer">
+                <button class="action-btn" onclick="shopNow(19)">Shop</button>
+            </div>
+        </div>
+
+        <div class="album-card">
+            <div class="album-img-box">
+                <img src="https://content.discogs.com/media/Nirvana-–-Bleach-300x296.jpeg" alt="Nirvana">
+            </div>
+            <div class="album-details">
+                <p class="title">Bleach</p>
+                <p class="artist">Nirvana</p>
+                <p class="meta">1989</p>
+                <p class="meta">Rock</p>
+                <p class="meta">Vinyl, Album, White, Limited Edition</p>
+                <p class="copy-info">7 copies from $3000.00</p>
+            </div>
+            <div class="card-footer">
+                <button class="action-btn" onclick="shopNow(20)">Shop</button>
+            </div>
+        </div>
+
+        <div class="album-card">
+            <div class="album-img-box">
+                <img src="https://i.discogs.com/BjYbHtknNuWVvJ6kJnrzWacmhTW8y8LLJQAzI8x1Ehw/rs:fit/g:sm/q:90/h:600/w:599/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTMzNDc3/NzQtMTY3NDUxNDEw/Ny02OTc0LmpwZWc.jpeg" alt="Apple">
+            </div>
+            <div class="album-details">
+                <p class="title">An Apple A Day</p>
+                <p class="artist">Apple</p>
+                <p class="meta">1969</p>
+                <p class="meta">Psychedelic Rock, Pop Rock</p>
+                <p class="meta">Vinyl, Album, Stereo</p>
+                <p class="copy-info">3 copies from $4418.60</p>
+            </div>
+            <div class="card-footer">
+                <button class="action-btn" onclick="shopNow(21)">Shop</button>
+            </div>
+        </div>
+
+        <div class="album-card">
+            <div class="album-img-box">
+                <img src="https://i.discogs.com/fAUeygUgd0_Tqp3K1YKem3G9S_yw8jlKCGbeWIz76ko/rs:fit/g:sm/q:90/h:300/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIzNzI0/MDItMTM4MDMwNTA4/MS01MzYzLmpwZWc.jpeg" alt="Madonna">
+            </div>
+            <div class="album-details">
+                <p class="title">Celebration</p>
+                <p class="artist">Madonna</p>
+                <p class="meta">2009</p>
+                <p class="meta">Dance-pop, Ballad</p>
+                <p class="meta">CD, DVD, Box Set, Promo</p>
+                <p class="copy-info">1 copy from $1901.14</p>
+            </div>
+            <div class="card-footer">
+                <button class="action-btn" onclick="shopNow(22)">Shop</button>
+            </div>
+        </div>
+
+        <div class="album-card">
+            <div class="album-img-box">
+                <img src="https://content.discogs.com/media/Pink-Floyd-The-Dark-Side-Of-The-Moon-Box-Set-300x282.jpeg" alt="Sleep Token">
+            </div>
+            <div class="album-details">
+                <p class="title">The Dark Side Of Moon</p>
+                <p class="artist">Pink Flyod</p>
+                <p class="meta">1981</p>
+                <p class="meta">Rock</p>
+                <p class="meta">LP, Black Vinyl, Box Set, Limited Edition</p>
+                <p class="copy-info">15 copies from $813.95</p>
+            </div>
+<div class="card-footer">
+    <button class="action-btn" onclick="addToCart(X)">Shop</button>
+</div>
+</div>
+        </div>
+    </div>
+</section>
+
+
+
+    <div style="text-align:center; margin:50px;"><a href="inventory.html" class="shop-btn">Shop All Records</a></div>
+    <script src="script.js"></script>
+</body>
+</html>
